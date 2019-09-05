@@ -80,9 +80,8 @@ Use three simple, common response codes indicating (1) success, (2) failure due 
 
 ### API Resources
 
-  - [GET /magazines](#get-magazines)
-  - [GET /magazines/[id]](#get-magazinesid)
-  - [POST /magazines/[id]/articles](#post-magazinesidarticles)
+  - [GET /persons/[id]](#)
+  - [POST /persons/[id]/articles](#)
 
 ### GET /details/person/
 
