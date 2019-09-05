@@ -68,9 +68,7 @@ Error responses should include a common HTTP status code, message for the develo
       "developerMessage" : "Verbose, plain language description of the problem. Provide developers
        suggestions about how to solve their problems here",
       "userMessage" : "This is a message that can be passed along to end-users, if needed.",
-      "errorCode" : "444444",
-      "moreInfo" : "http://www.example.gov/developer/path/to/help/for/444444,
-       http://drupal.org/node/444444",
+      "errorCode" : "400"
     }
 
 Use three simple, common response codes indicating (1) success, (2) failure due to client-side problem, (3) failure due to server-side problem:
