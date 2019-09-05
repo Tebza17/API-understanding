@@ -5,6 +5,7 @@
 
 * [Guidelines](#guidelines)
 * [RESTful URLs](#restful-urls)
+* [Responses](#responses)
 
 ## Guidelines
 
@@ -30,3 +31,28 @@ This document borrows heavily from:
     * If it doesn’t change the logic for each response, like OAuth info, put it in the header.
 * Specify optional fields in a comma separated list.
 * Formats should be in the form of api/v2/resource/{id}.json
+
+## Responses
+
+* No values in keys
+* No internal-specific names (e.g. "node" and "taxonomy term")
+* Metadata should only contain direct properties of the response set, not properties of the members of the response set
+
+### Good examples
+
+No values in keys:
+
+    "tags": [
+      {"id": "125", "name": "Vincent"},
+      {"id": "126", "name": "Teboho"}
+    ],
+
+
+### Bad examples
+
+Values in keys:
+
+    "tags": [
+      {"125": "Vincent"},
+      {"126": "Teboho"}
+    ],
