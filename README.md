@@ -7,6 +7,7 @@
 * [RESTful URLs](#restful-urls)
 * [Responses](#responses)
 * [Error handling](#error-handling)
+* [Typical Request & Response ](#request--response-examples)
 
 ## Guidelines
 
@@ -76,3 +77,57 @@ Use three simple, common response codes indicating (1) success, (2) failure due 
 * 200 - OK
 * 400 - Bad Request
 * 500 - Internal Server Error
+
+## Request & Response Examples
+
+### API Resources
+
+  - [GET /magazines](#get-magazines)
+  - [GET /magazines/[id]](#get-magazinesid)
+  - [POST /magazines/[id]/articles](#post-magazinesidarticles)
+
+### GET /details/person/
+
+Example: http://localhost:51724/api/details/person/77454
+
+Response body:
+
+    {
+        "metadata": {
+            "resultset": {
+                "count": 123,
+                "offset": 0,
+                "limit": 10
+            }
+        },
+        "results": [
+            {
+                "id": "1234",
+                "name": "Vincent",
+                "surname": "Mokoena",
+                "tags": [
+                    {"125": "Vincent"},
+					{"126": "Teboho"}
+                ],
+                "created": "1231621302"
+            }
+        ]
+    }
+
+### GET /details/person/[id]
+
+Example: http://localhost:51724/api/details/person/[id].json
+
+Response body:
+
+    {
+		"id": "1234",
+		"name": "Vincent",
+		"surname": "Mokoena",
+		"tags": [
+			{"125": "Vincent"},
+			{"126": "Teboho"}
+		],
+		"created": "1231621302"
+	}
+
